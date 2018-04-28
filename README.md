@@ -9,11 +9,9 @@ be cleared.  You can clear the high byte, then test the most significant bit of 
 command followed by a set command that will set the high byte to all ones.
 
 Example:
-
 lpm   TEMPL, Z+
 clr   TEMPH
 sbrc  TEMPL, 7
 ser   TEMPH
 add   pwL, TEMPL
 adc   pwH, TEMPH
-

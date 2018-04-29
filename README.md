@@ -9,12 +9,12 @@ be cleared.  You can clear the high byte, then test the most significant bit of 
 command (skip if bit in register cleared) followed by a ser command (set bits in register) that will set 
 the high byte to all ones.
 
-Example:
+Example:<br>
 '''
-lpm   TEMPL, Z+
-clr   TEMPH
-sbrc  TEMPL, 7
-ser   TEMPH
-add   pwL, TEMPL
-adc   pwH, TEMPH
+lpm   TEMPL, Z+<br>
+clr   TEMPH<br>
+sbrc  TEMPL, 7<br>
+ser   TEMPH<br>
+add   pwL, TEMPL<br>
+adc   pwH, TEMPH<br>
 '''

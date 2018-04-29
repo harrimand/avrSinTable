@@ -6,7 +6,8 @@ reading the table values and updating the Pulse Width Register.  The values in t
 Hex values.  The high byte of the 16 bit value being added to the Pulse Width register should be set to all 
 ones if the most significant bit of the value read from the table is a one.  Otherwise the high byte should 
 be cleared.  You can clear the high byte, then test the most significant bit of the value read using sbrc 
-command followed by a set command that will set the high byte to all ones.
+command (skip if bit in register cleared) followed by a ser command (set bits in register) that will set 
+the high byte to all ones.
 
 Example:
 lpm   TEMPL, Z+

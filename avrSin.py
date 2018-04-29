@@ -31,7 +31,6 @@ for i, d in enumerate(data):
 
 print("\nStep Size\n", stepSize)
 
-
 # Generating a string containing all 8 bit signed hex values formatted as a table with .db (define byte)
 # directives that can be included in the AVR program.
 

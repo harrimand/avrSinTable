@@ -10,11 +10,11 @@ command (skip if bit in register cleared) followed by a ser command (set bits in
 the high byte to all ones.
 
 Example:<br>
-'''
+
 lpm   TEMPL, Z+<br>
 clr   TEMPH<br>
 sbrc  TEMPL, 7<br>
 ser   TEMPH<br>
 add   pwL, TEMPL<br>
 adc   pwH, TEMPH<br>
-'''
+

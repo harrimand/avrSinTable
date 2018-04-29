@@ -11,10 +11,10 @@ the high byte to all ones.
 
 Example:<br>
 ```
-lpm   TEMPL, Z+<br>
-clr   TEMPH<br>
-sbrc  TEMPL, 7<br>
-ser   TEMPH<br>
-add   pwL, TEMPL<br>
-adc   pwH, TEMPH<br>
+lpm   TEMPL, Z+
+clr   TEMPH
+sbrc  TEMPL, 7
+ser   TEMPH
+add   pwL, TEMPL
+adc   pwH, TEMPH
 ```

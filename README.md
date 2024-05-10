@@ -7,7 +7,11 @@ Hex values.  The high byte of the 16 bit value being added to the Pulse Width re
 ones if the most significant bit of the value read from the table is a one.  Otherwise the high byte should 
 be cleared.  You can clear the high byte, then test the most significant bit of the value read using sbrc 
 command (skip if bit in register cleared) followed by a ser command (set bits in register) that will set 
-the high byte to all ones.
+the high byte to all ones.  If table is read at 20 mS intervals, it will take specified number of seconds 
+to complete the sin wave motion.  Resetting Z address pointer to table address when reaching tableEnd address
+will continue the sin wave sequence.  Preload X or Y address with TableEnd address to compare with Z after 
+reading table value to determine if you've reached the end of the table.  Update OCR1A or OCR1B with pwH and
+pwL after adding the table value to the PWH, PWL registers.
 
 Example:<br>
 ```
